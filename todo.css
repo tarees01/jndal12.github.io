@@ -1,0 +1,13 @@
+body {
+	background-color: gray;
+}
+
+ul.checkmark li:before {
+    content:"\2713\0020";
+}
+
+section {text-decoration: line-through;}
+
+h1 { color: orange;}
+
+h2,h3,h4 { color: green;}
