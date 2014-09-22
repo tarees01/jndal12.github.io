@@ -6,6 +6,11 @@ ul.checkmark li:before {
     content:"\2713\0020";
 }
 
+ul.checkmark {
+    list-style-type: none;
+}
+
+
 section {text-decoration: line-through;}
 
 h1 { color: orange;}
