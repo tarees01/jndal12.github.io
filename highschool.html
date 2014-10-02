@@ -1,0 +1,140 @@
+<html>
+<head>
+	<style>
+    aside {
+		        position: relative;
+                width: 80%;
+                height: 500px;
+				
+				}
+				nav{ position: relative; height: 20px;}
+				section{height: 20px;}
+	        ul{
+
+	            padding: 0;
+
+	            list-style: none;
+
+	        }
+
+	        ul li{
+
+	            float: left;
+
+	            width: 200px;
+
+	            text-align: center;
+
+	        }
+
+	        ul li a{
+
+	            display: block;
+
+	            padding: 20px 30px;
+
+	            color: orange;
+
+	            background: gray;
+
+	            text-decoration: none;
+				
+
+	        }
+
+	        ul li a:hover{
+
+	            color: #fff;
+
+	            background: #939393;
+				overflow: hidden;
+
+	        }
+
+	        ul li ul{
+				height: 200px;
+
+	            display: none;
+				
+
+	        }
+
+	        ul li:hover ul{
+				
+
+	            display: block; 
+				height: 200px;/* display the dropdown */
+
+	        }
+	</style>
+	<script type="text/javascript">
+		var image1 = new Image()
+		image1.src = "http://m.c.lnkd.licdn.com/media/p/6/005/04a/3a1/3879ec9.png"
+		var image2 = new Image()
+		image2.src = "http://i2.ytimg.com/vi/Un_oM_tH54w/0.jpg"
+		var image3 = new Image()
+		image3.src = "http://photos.smugmug.com/photos/i-566RJSB/0/M/i-566RJSB-M.jpg"
+		var image4 = new Image()
+		image4.src = "http://www.sjmfootball.com/SJM_celebration_800x533.jpg"
+		
+	</script>
+</head>
+
+<body>
+	<nav>
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+			<a href="#">About</a>
+			<ul>
+				<li><a href="hometown.html">Hometown</a></li>
+				<li><a href="highschool.html">High School</a></li>
+				<li><a href="resturants.html">Great Food</a></li>
+			</ul>
+		
+		</li>
+		 <li>
+
+            <a href="#">Luther Life</a>
+
+            <ul>
+
+                <li><a href="classes.html">Classes</a></li>
+
+
+                <li><a href="todo.html">To do List</a></li>
+
+            </ul>
+
+        </li>
+
+        <li><a href="#">Contact</a>
+			<ul>
+				<li><a href="contact.html">Info</a></li>
+			</ul>
+		</li>
+		
+
+    </ul>
+</nav>
+	<p><img src="http://m.c.lnkd.licdn.com/media/p/6/005/04a/3a1/3879ec9.png" width="600" height="300" name="slide" /></p>
+	<script type="text/javascript">
+	        var step=1;
+	        function slideit()
+	        {
+	            document.images.slide.src = eval("image"+step+".src");
+	            if(step<4)
+	                step++;
+	            else
+	                step=1;
+	            setTimeout("slideit()",2500);
+	        }
+	        slideit();
+	</script>
+	<aside><p> I went to high school at San Joaquin Memorial. I graduated with a class of 128 students. It had a total of 565 students at the time I went there. It was considered to be a college prep school but I do appose that phrase. We are also known as <a href="http://www.sjmhs.org">SJM</a> and if you click the 'SJM', then you will be directed to the school's website. It was a good place to grow up and make friends. I met a couple of great mentors there, such as my baseball coach and my physics teacher. Good things must come to an end to hopefully better times. </p> </aside> 
+	
+    
+	
+</body>

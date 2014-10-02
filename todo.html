@@ -2,38 +2,46 @@
 <html>
 
 <head>
+	<title>To Do List</title>
 	<link rel="stylesheet" type="text/css" href="todo.css">
+	
 </head>
 
 	
 
 <body>
-	<h1> Juan's todo list </h1>
+
+	<h1> Juan's to do list </h1>
+	<p> Click line when done </p>
 	
 	<h2> High Priority </h2>
-	<ul class="checkmark">
+	<ul>
 		<li> Getting CS homework done </li>
 		<li> Working on my Accounting homework </li>
-	</ul>
-	<ul>	
+		
+		
 		<li> Working on my Norweigan homework </li>
 		<li> Study then for Norweigan </li>
-	</ul>
-	<h3> Medium Priority </h3>
-	<section>
-		<ul>	
-			<li> Getting to my work study at Marty's </li>
-			<li> Getting to my job at Fairway </li>
-			<li> Eating </li>
-		</ul>
-	</section>
+	
+	<h3> Medium Priority </h3>	
+		<li> Getting to my work study at Marty's </li>
+		<li> Getting to my job at Fairway </li>
+		<li> Eating </li>
 	<h4>Small  Priority </h4>
-		<ul>
-			<li> Making sure fanatsy team is looking good </li>
-			<li> Watching Tv </li>
-			<li> Sleeping </li>
+	    <li> Making sure fanatsy team is looking good </li>
+		<li> Watching Tv </li>
+		<li> Sleeping </li>
 			
 		</ul>	
+		
+	<script type="text/javascript">
+	var list = document.querySelector('ul');
+	list.addEventListener('click', function(ev) {
+	  if( ev.target.tagName === 'LI') {
+	     ev.target.classList.toggle('done'); 
+	  }
+	}, false);
+	</script>
 
 	
 	

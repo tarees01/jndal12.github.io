@@ -1,14 +1,140 @@
 <!DOCTYPE html>
 
 <html>
+<head>
+	
+    <meta charset="utf-8">
+
+    <title>Juan's Hometown</title>
+
+    <style type="text/css">
+	h1 {color: green;}
+
+        ul{
+
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+        ul li{
+
+            float: left;
+
+            width: 200px;
+
+            text-align: center;
+
+        }
+
+        ul li a{
+
+            display: block;
+
+            padding: 20px 30px;
+
+            color: orange;
+
+            background: gray;
+
+            text-decoration: none;
+
+        }
+
+        ul li a:hover{
+
+            color: #fff;
+
+            background: #939393;
+
+        }
+
+        ul li ul{
+
+            display: none;
+
+        }
+
+        ul li:hover ul{
+
+            display: block; /* display the dropdown */
+
+        }
+
+    </style>
+	<script type="text/javascript">
+		var image1 = new Image()
+		image1.src = "http://playfresno.org/img/sports-recreation/mascot_fresno_baseball_team.jpg"
+		var image2 = new Image()
+		image2.src = "http://www.allaccess.com/assets/img/editorial/raw/tn/tnfresno.jpg"
+		var image3 = new Image()
+		image3.src = "http://media-cdn.tripadvisor.com/media/photo-s/01/5b/91/88/fresno.jpg"
+		var image4 = new Image()
+		image4.src = "http://townmapsusa.com/images/maps/map_of_fresno_ca.jpg"
+	</script>
+	
+</head>
 
 <body>
-	<header> 
 		<h1> Juan's hometown </h1>
-	</header>
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+				<a href="#">About</a>
+				<ul>
+					<li><a href="hometown.html">Hometown</a></li>
+					<li><a href="highschool.html">High School</a></li>
+					<li><a href="resturants.html">Great Food</a></li>
+				</ul>
+			
+			</li>
+			 <li>
+
+                <a href="#">Luther Life</a>
+
+                <ul>
+
+                    <li><a href="classes.html">Classes</a></li>
+
+                    <li><a href="todo.html">To Do List</a></li>
+
+
+                </ul>
+
+            </li>
+
+            <li><a href="#">Contact</a>
+				<ul>
+					<li><a href="contact.html">Info</a></li>
+				</ul>
+			</li>
+			
+
+        </ul>
+		
+		
+	<p><img src="http://playfresno.org/img/sports-recreation/mascot_fresno_baseball_team.jpg" width="600" height="300" name="slide" /></p>
+	<script type="text/javascript">
+	        var step=1;
+	        function slideit()
+	        {
+	            document.images.slide.src = eval("image"+step+".src");
+	            if(step<4)
+	                step++;
+	            else
+	                step=1;
+	            setTimeout("slideit()",2500);
+	        }
+	        slideit();
+	</script>
 	
-	<p> Hello. I was born in Fresno, California. I have lived there all of my life until I of course moved here to Decorah to go to college. I go back home normally on Christmas break and that's about it. I went to San Joaquin Memorial High School. I was on the baseball team there, and for awhile I was apart of the football team. Fresno has a poplulation of more than 510,000 people. My city is home to the Fresno Grizzlies who are the thriple-A affialte to the San Francisco Giants. Fresno is 3 hours and 30 minutes north of Los Angles and it is 3 hours south of San Francisco. The weather is normally nice with no humidity. The coldest it gets during the winter time is only 25 degrees at the coldest. It does not snow there. During the summmer though, it can get up to 115 degrees. It's a big city with a lot of things to do, but if you ever get bored there are much more things to do in even bigger cities than Fresno. 
-	</p>
+
+	<p> Hello. I was born in Fresno, California. I have lived there all of my life until I of course moved here to Decorah to go to college. I go back home normally on Christmas break and that's about it. I went to San Joaquin Memorial High School. Fresno has a poplulation of more than 510,000 people. My city is home to the Fresno Grizzlies who are the thriple-A affialte to the San Francisco Giants. Fresno is 3 hours and 30 minutes north of Los Angles and it is 3 hours south of San Francisco. The weather is normally nice with no humidity. The coldest it gets during the winter time is only 25 degrees at the coldest. It does not snow there. During the summmer though, it can get up to 115 degrees. It's a big city with a lot of things to do, but if you ever get bored there are much more things to do in even bigger cities than Fresno. </p>
+	
+	
 	
 </body>
 
