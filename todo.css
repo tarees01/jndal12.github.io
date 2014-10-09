@@ -3,6 +3,7 @@ li {
   position: relative;
   margin: 2px;
   padding: 0.5em 0.5em 0.5em 2em;
+  
 }
 
 li.done {
@@ -22,8 +23,8 @@ li.done::before {
   transform: rotate(45deg);
   width: 0.5em;
 }
-h1 { color: green;}
-
-h2,h3,h4 {color: orange; }
+header { color: green;
+		font-size: 45px;}
+h1,h2,h3,h4 {color: orange; }
 
 body { background-color: gray;}

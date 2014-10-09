@@ -5,16 +5,19 @@
 	<title>To Do List</title>
 	<link rel="stylesheet" type="text/css" href="todo.css">
 	
+	
 </head>
 
 	
 
 <body>
+	
 
-	<h1> Juan's to do list </h1>
+	<header> Juan's to do list </header>
 	<p> Click line when done </p>
 	
-	<h2> High Priority </h2>
+	
+	<h1> High Priority </h2>
 	<ul>
 		<li> Getting CS homework done </li>
 		<li> Working on my Accounting homework </li>
@@ -23,25 +26,76 @@
 		<li> Working on my Norweigan homework </li>
 		<li> Study then for Norweigan </li>
 	
-	<h3> Medium Priority </h3>	
+	<h2> Medium Priority </h3>	
 		<li> Getting to my work study at Marty's </li>
 		<li> Getting to my job at Fairway </li>
 		<li> Eating </li>
-	<h4>Small  Priority </h4>
+	<h3>Small  Priority </h4>
 	    <li> Making sure fanatsy team is looking good </li>
 		<li> Watching Tv </li>
 		<li> Sleeping </li>
 			
-		</ul>	
+	<h4> List Add ons </h5>
+		<li id="do"> </li>
 		
+		<input type='text' id='input'/>
+		<input type='button' onclick='addText()' value='Add To List'/>
+	</ul>
+	
 	<script type="text/javascript">
-	var list = document.querySelector('ul');
-	list.addEventListener('click', function(ev) {
-	  if( ev.target.tagName === 'LI') {
-	     ev.target.classList.toggle('done'); 
-	  }
-	}, false);
-	</script>
+		var list = document.querySelector('ul');
+		list.addEventListener('click', function(ev) {
+		  if( ev.target.tagName === 'LI') {
+		     ev.target.classList.toggle('done'); 
+		  }
+		}, false);
+		function addText(){
+		    var input = document.getElementById('input').value;
+		   
+		    var node=document.createElement("li");
+		    var textnode=document.createTextNode(input);
+		    node.appendChild(textnode);
+		    document.getElementById('do').appendChild(node);
+			
+		}
+		var siteUrl = '/sites/MySiteCollection';
+
+		function updateListItem() {
+
+		    var clientContext = new SP.ClientContext(siteUrl);
+		    var oList = clientContext.get_web().get_lists().getByTitle('Announcements');
+
+		    this.oListItem = oList.getItemById(3);
+
+		    oListItem.set_item('Title', 'My Updated Title');
+
+		    oListItem.update();
+
+		    clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+		}
+
+		function onQuerySucceeded() {
+
+		    alert('Item updated!');
+		}
+
+		function onQueryFailed(sender, args) {
+
+		    alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+		}
+	
+		
+		
+		</script>
+		
+		
+	
+		
+	
+		
+
+		
+	
 
 	
 	
