@@ -80,6 +80,16 @@
 		}
 
 		function onQueryFailed(sender, args) {
+			this.oList = oWebsite.get_lists().add(listCreationInfo);
+
+			            oList.set_description('New Announcements List');
+
+			            oList.update();
+
+			            clientContext.load(oList);
+
+			            clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+			
 
 		    alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
 		}
