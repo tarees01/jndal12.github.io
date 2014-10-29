@@ -2,7 +2,9 @@ var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
+//var field = document.getElementById("field");
 
+// need to add priority  aspect 
 var createNewTaskElement = function(taskString) {
   var listItem = document.createElement("li");
                                               
@@ -11,8 +13,11 @@ var createNewTaskElement = function(taskString) {
   var editInput = document.createElement("input");
   var editButton = document.createElement("button");
   var deleteButton = document.createElement("button");
+  
+  //need to add prriority to each new element
 
   checkBox.type = "checkbox";
+  //priority bar.type = "scrollbar";
   editInput.type = "text";
 
   editButton.innerText = "Edit";
@@ -27,6 +32,7 @@ var createNewTaskElement = function(taskString) {
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
+  //need to append priority to list item
 
   return listItem;
 
@@ -34,9 +40,13 @@ var createNewTaskElement = function(taskString) {
 
 var addTask = function() {
   console.log("Add task...");
+
   var listItem = createNewTaskElement(taskInput.value);
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
+  localStorage.setItem("addTask", JSON.stringify(data));
+  
+  taskInput.value = "Please enter Task and Date Due";
 }
 var editTask = function() {
   console.log("Edit task...");
@@ -50,8 +60,9 @@ if(containsClass) {
     editInput.value = label.innerText;
 }
   listItem.classList.toggle("editMode");
+  //localStorage.setItem("todoData", JSON.stringify(data));
 }
-
+// var 
   
 
 var deleteTask = function() {
@@ -60,6 +71,7 @@ var deleteTask = function() {
   var listItem = this.parentNode; 
   var ul = listItem.parentNode;
   ul.removeChild(listItem);
+  //localStorage.setItem("todoData", JSON.stringify(data));
 }
 
 var taskCompleted = function() {
@@ -76,23 +88,60 @@ var taskIncomplete = function() {
   bindTaskEvents(listItem, taskCompleted);
   
 }
+ /*var saveList = function() {
+	stringed = JSON.stringify(addTask);
+	localStorage.setItem("todoSave",stringed);
+	localStorage.setItem("todoSave", JSON.stringify(data))
+	}*/
 
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+	// maybe add checkBoxPriorityHandler as a parameter
   console.log("Bind list item events");
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector("button.edit");
   var deleteButton = taskListItem.querySelector("button.delete");
+  //need to add the priority aspect 
+  // var priorityScroll = taskListItem.querySelector("input[type=scroll]");
   editButton.onclick = editTask;
   deleteButton.onclick = deleteTask;
   checkBox.onchange = checkBoxEventHandler;
+  //localStorage.setItem("todoData", JSON.stringify(data));
+  //priotiryBar.onchange = checkBoxPriorityHandler
 
 }
-addButton.onclick = addTask;
+var ajaxRequest = function() {
+	console.log("AJAX request");
+}
+var data = JSON.parse(localStorage.getItem("addTask"));
+
+
+
+
+addButton.addEventListener("click", addTask);
+
+addButton.addEventListener("click", ajaxRequest);
+addButton.addEventListener("click", data);
+
+ 
+ 
+ 
+//addButton.addEventListener("click"), saveList);
 
 for(var i = 0; i < incompleteTasksHolder.children.length; i++) {
   bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+  
 }
 
 for(var i = 0; i < completedTasksHolder.children.length; i++) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+  
 }
+/*if (localStorage.getItem("addTask")) {
+   // Restore the contents of the text field
+   field.value = localStorage.getItem("addTask");
+}*/
+
+// Listen for changes in the text field
+/*addButton.addEventListener("change", function() {
+   localStorage.setItem("addTask", data.value);
+});*/
