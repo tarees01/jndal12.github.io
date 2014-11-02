@@ -44,12 +44,12 @@ var sendSearch = function(q) {
 		success: listResults
 	});
 };
-this.append(flagPicker).append(flagLink).append(label).append("<br>").append(input).append(resultList);
+/*this.append(flagPicker).append(flagLink).append(label).append("<br>").append(input).append(resultList);
 input.on("change", function(e) {
 	if(this.value.length > 0) {
 		sendSearch(this.value);
 	}
-});
+});*/
 input.on("keypress", function(e) {
 	if($.browser.msie && e.keyCode == 13 && this.value.length > 0) {
 		sendSearch(this.value);
