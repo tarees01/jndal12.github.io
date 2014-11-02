@@ -1,12 +1,11 @@
 <html>
 <head>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="util.js"></script>
-	<script type="text/javascript" src="wikisearch.js"></script>
+	<script type="text/javascript" 				src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	
 	<script type="text/javascript">
 	$(window).load(function() {
 		$("#box").wikiSearch({
-	
+
 			callback: function(lemma, lang) {
 				location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma;
 			},
@@ -60,6 +59,7 @@
 			width: 100%;
 			background: white;
 			height: 200;
+			
 		}
 		#container #vidbar {
 			width:100%;
@@ -124,7 +124,9 @@
 <iframe id="player" width='640' height='390' src=" " frameborder="0"> </iframe>
 </div>
 </div>
-	
+<div id="box" style="width: 300px; border: 1px solid"></div>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="wikisearch.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="search.js"> </script>
     <script src="auth.js"></script>
