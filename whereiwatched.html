@@ -80,6 +80,20 @@
 			text-align: center;
 		}
 	</style>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="wikisearch.js"></script>
+	<script type="text/javascript">
+	$(window).load(function() {
+	$("#box").wikiSearch({
+	callback: function(lemma, lang) {
+	location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma;
+	},
+	label: "Search wiki"
+	});
+	});
+	</script>
 </head>
 <body>
 <div id='header'> 
@@ -93,18 +107,8 @@
 </div>
 <div id="container">
 <div id= 'wiki' height='200'> 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript">
-	$(window).load(function() {
-		$("#box").wikiSearch({
-			callback: function(lemma, lang) {
+	<div id="box" style="width: 300px; border: 1px solid"></div>
 	
-				location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma;
-			},
-			label: "Search wiki"
-		});
-	});
-	</script>
 	<!-- Juan!!! This is where you put your stuff. this div with the ID wiki -->
 </div>
 <div id='vidbar'> 
@@ -113,8 +117,7 @@
 <iframe id="player" width='640' height='390' src=" " frameborder="0"> </iframe>
 </div>
 </div>
-	<script type="text/javascript" src="util.js"></script>
-	<script type="text/javascript" src="wikisearch.js"></script>
+	
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="search.js"> </script>
     <script src="auth.js"></script>
