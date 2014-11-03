@@ -30,10 +30,13 @@ text-align: center;
 margin: 5px auto;
 }
 .wikiResults{
-	height: 10px;
+	height: 8px;
 background-color: rgb(255, 100, 127);
 text-align: center;
-padding: 30px;
+padding: 15px;
 margin: 5px auto;
 width: 5%;
+}
+.wikiResults:hover{
+background-color: rgb(107, 255, 124);
 }
