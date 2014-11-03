@@ -14,8 +14,8 @@ button{
 text-align: center;
 font-weight: bold;
 font-size: 10px;
-height: 40px;
-width: 120px;
+height: 15px;
+width: 25px;
 margin-top: 10px;
 border: 2px none;
 border-radius: 10px;
@@ -36,7 +36,4 @@ text-align: center;
 padding: 30px;
 margin: 5px auto;
 width: 5%;
-}
-.wikiResults:hover{
-background-color: rgb(107, 255, 124);
 }
