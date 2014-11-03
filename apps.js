@@ -14,7 +14,7 @@ if (data.error) {
 switch (data.error.code) {
 case 'missingtitle':
 $.ajax({
-url: 'https://ru.wikipedia.org/w/api.php?format=json&action=query&list=search&srnamespace=0&srlimit=10&srsearch=' + inputText,
+url: 'https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srnamespace=0&srlimit=10&srsearch=' + inputText,
 dataType: 'jsonp'
 }).done(function (data) {
 console.log(data);
