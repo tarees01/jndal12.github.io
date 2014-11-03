@@ -1,21 +1,16 @@
 
+<!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="util.js"></script>
-<script type="text/javascript" src="wikisearch.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-$("#box").wikiSearch({
-callback: function(lemma, lang) {
-location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma;
-},
-label: "Search wiki"
-});
-});
-</script>
+<meta charset="utf-8" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="apps.js"></script>
 </head>
 <body>
-<div id="box" style="width: 300px; border: 1px solid"></div>
+<form id="s-form">
+<input type="text" style="width: 300px" />
+<button type="button">Искать</button>
+</form>
+<div style="font-size: 12px; font-family: 'Arial'; width: 400px; border: 1px solid black; padding: 20px; margin-top: 10px;" id="content"></div>
 </body>
 </html>
