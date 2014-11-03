@@ -31,6 +31,7 @@ $.ajax({
 url: url + currentTerm,
 type: 'GET',
 dataType: 'jsonp',
+success: listResults
 error: function(data){
 console.log("We got problems");
 console.log(data.status);
