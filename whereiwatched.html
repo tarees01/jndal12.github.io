@@ -9,7 +9,7 @@
 	
 	<script type="text/javascript">
 	$(window).load(function() {
-	$("#box").wikiSearch({
+	$(box).wikiSearch({
 	callback: function(lemma, lang) {
 	location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma;
 	},
