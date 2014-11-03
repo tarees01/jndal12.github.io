@@ -64,11 +64,11 @@ searchResults[i] +
 });
 };
 //Code to be executed once the page has fully loaded
-$(document).ready(function () {
+/*$(document).ready(function () {
 "use strict";
 console.log("LOADED!!!!");
 //Use jQuery to assign a callback function when the 'search' button is clicked
-$("#search").click(function(){
+$("#search-button").click(function(){
 console.log("Clicked search");
 //Clear out any old searches
 $('#resultsTarget').html('');
@@ -89,7 +89,7 @@ $("#search-button").trigger('click');
 }
 });
 });
-
+*/
 function createList(array) {
 	console.log(array);
 	var container= document.getElementById("vidbar");
