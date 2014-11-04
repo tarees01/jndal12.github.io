@@ -44,7 +44,7 @@ showResult(data.parse.text['*']);
 });
 }
 $('#s-form button').on('click', function () {
-var inputText = $.trim($('#s-form input').val());
+var inputText = $.trim($('#s-form query').val());
 startSearch(inputText);
 });
 $(document).on('click', '.snippet-item', function (event) {

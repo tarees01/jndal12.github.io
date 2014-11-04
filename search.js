@@ -1,6 +1,6 @@
 // Search for a specified string.
 function search() {
-  var q = $('#query').val();
+  var q = $('#s-form query').val();
   var request = gapi.client.youtube.search.list({
     type: 'video',
     q: q,
