@@ -21,7 +21,7 @@ $("#searchTerm").html(data[0]);
 //Create a var to save the array of search results
 var searchResults = data[1];
 var $ul = $('<ol></ol>');
-for (var i = 0; i < data.query.searchResults.length; i++) {
+for (var i = 0; i < data.query.search.length; i++) {
 var item = data.query.search[i];
 var $li = $('<li></li>');
 
