@@ -38,7 +38,7 @@ type: 'GET',
 dataType: 'jsonp',
 }
 //});
-break;
+//break;
 }
 }
 else {
@@ -54,5 +54,6 @@ $(document).on('click', '.snippet-item', function (event) {
 event.preventDefault();
 var text = $(this).text();
 startSearch(text);
+});
 });
 });
