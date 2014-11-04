@@ -48,7 +48,7 @@ var inputText = $.trim($('#input').val());
 startSearch(inputText);
 });
 $(document).on('click', '.snippet-item', function (event) {
-//event.preventDefault();
+event.preventDefault();
 var text = $(this).text();
 startSearch(text);
 });
