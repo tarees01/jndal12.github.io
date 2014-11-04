@@ -25,7 +25,7 @@ var $ul = $('<ol></ol>');
 for (var i = 0; i < data.query.search.length; i++) {
 var item = data.query.search[i];
 var $li = $('<li></li>');
-$li.append('<h3><a href="#" class="snippet-item">' + item.title + url 'http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=' '</a></h3>');
+$li.append('<h3><a href="#" class="snippet-item">' + item.title + url   '</a></h3>');
 $li.append(item.snippet);
 $ul.append($li);
 }
