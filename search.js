@@ -369,5 +369,5 @@ $(document).on('click', '.snippet-item', function (event) {
 var text = $(this).text();
 startSearch(text);
 });
-});
 });*/
+
