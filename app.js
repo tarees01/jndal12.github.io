@@ -20,11 +20,19 @@ $("#searchTerm").html(data[0]);
 //The data we want is the second item in the returned JSON, hence value "1"
 //Create a var to save the array of search results
 var searchResults = data[1];
+var $ul = $('<ol></ol>');
+for (var i = 0; i < data.query.searchResults.length; i++) {
+var item = data.query.search[i];
+var $li = $('<li></li>');
+
+$li.append('<h3><a href="#" class="snippet-item">' + item.title +  '</a></h3>');
+$li.append(item.snippet);
+$ul.append($li);
 //Loop through the array of results
-for (var i = 0; i < searchResults.length; i++){
+//for (var i = 0; i < searchResults.length; i++){
 //Use 'replace' and a regular expression to substitue white space with '_' character
-var resultTerms = searchResults[i].replace(/\s/g, '_');
-var curURL = 'http://en.wikipedia.org/wiki/' + resultTerms;
+//var resultTerms = searchResults[i].replace(/\s/g, '_');
+var curURL = 'http://en.wikipedia.org/wiki/' + item;
 //Use jQuery's append() function to add the searchResults to the DOM
 //The argument for the append function will be a string of HTML
 $("#resultsTarget").append(
