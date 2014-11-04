@@ -43,8 +43,8 @@ showResult(data.parse.text['*']);
 }
 });
 }
-$('#search-button').on('click', function () {
-var inputText = $.trim($('#input').val());
+$('#s-form button').on('click', function () {
+var inputText = $.trim($('#s-form input').val());
 startSearch(inputText);
 });
 $(document).on('click', '.snippet-item', function (event) {
