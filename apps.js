@@ -43,7 +43,7 @@ showResult(data.parse.text['*']);
 }
 });
 }
-$('#s-form button').on('click', function () {
+$('#seach-button').on('click', function () {
 var inputText = $.trim($('#s-form input').val());
 startSearch(inputText);
 });
