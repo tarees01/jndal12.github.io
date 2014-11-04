@@ -315,7 +315,7 @@ function clearList() {
 	while ( entry.firstChild ) entry.removeChild( entry.firstChild );
 }
 
-$(document).ready(function () {
+/*$(document).ready(function () {
 function showResult(contentHtml) {
 $('#content').html(contentHtml);
 }
@@ -370,4 +370,4 @@ var text = $(this).text();
 startSearch(text);
 });
 });
-});
+});*/
