@@ -37,7 +37,7 @@ url: url + item.snippet,
 type: 'GET',
 dataType: 'jsonp',
 }
-});
+//});
 break;
 }
 }
