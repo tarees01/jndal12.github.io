@@ -30,6 +30,12 @@ $li.append(item.snippet);
 $ul.append($li);
 }
 showResult($ul);
+
+var url = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=";
+$.ajax({
+url: url + item.snippet,
+type: 'GET',
+dataType: 'jsonp',
 }
 });
 break;
