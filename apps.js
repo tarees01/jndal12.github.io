@@ -53,4 +53,3 @@ var text = $(this).text();
 startSearch(text);
 });
 });
-});
