@@ -97,9 +97,9 @@ startSearch(inputText);
 });
 $(document).on('click', '.snippet-item', function (event) {
 //event.preventDefault();
-var newSearchTerm = $("#query").val();
-searchWikipedia(newSearchTerm);
-//var text = $(this).text();
-//startSearch(text);
+//var newSearchTerm = $("#query").val();
+//searchWikipedia(newSearchTerm);
+var text = $(this).text();
+startSearch(text);
 });
 });
